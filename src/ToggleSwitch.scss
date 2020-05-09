@@ -1,0 +1,92 @@
+// Colors
+$label-color: #666;
+$toggle-color: #f75d5d;
+$white: #fff;
+$toggle-width: 1.45in;
+$line-height: 34px;
+$toggle-height: $line-height * 2;
+
+// Styles
+.toggle-switch {
+  position: relative;
+  width: $toggle-width;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: left;
+  &-checkbox {
+    display: none;
+  }
+  &-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0 solid $label-color;
+    height: $toggle-height;
+    border-radius: 10px;
+    margin: 0;
+  }
+  &-inner {
+    display: block;
+    width: 200%;
+    height: $toggle-height;
+    margin-top: -$toggle-height;
+    transition: margin 0.3s ease-in 0s;
+    &:before,
+    &:after {
+      display: block;
+      width: 50%;
+      height: $toggle-height;
+      padding: 5px;
+      line-height: $line-height - 0px;
+      font-size: 12px;
+      color: white;
+      font-weight: bold;
+      box-sizing: border-box;
+      text-align:center;
+    }
+    &:before {
+      content: attr(data-yes);
+      // text-transform: uppercase;
+      background-color: $toggle-color;
+      color: $white;
+    }
+    &:after {
+      content: attr(data-no);
+      padding-top: $line-height - 5px;
+      background-color: $label-color;
+      color: $white;
+    }
+  }
+  &-disabled {
+    background-color: $label-color;
+    cursor: not-allowed;
+    &:before {
+      background-color: $label-color;
+      cursor: not-allowed;
+    }
+  }
+  &-switch {
+    display: block;
+    width: $toggle-width - 14px;
+    margin: 5px;
+    background: $white;
+    position: absolute;
+    top: 0;
+    height: $line-height/2;
+    left: 2px;
+    border: 0 solid $label-color;
+    border-radius: 10px;
+    transition: all 0.3s ease-in 0s;
+  }
+  &-checkbox:checked + &-label {
+    .toggle-switch-inner {
+      margin-top: 0;
+    }
+    .toggle-switch-switch {
+      top:$line-height + 7px;
+    }
+  }
+}

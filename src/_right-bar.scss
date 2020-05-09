@@ -1,0 +1,44 @@
+$page-width: 8.5in !default;
+
+@mixin right-bar-common{
+  position:fixed;
+  left: $page_width + 2.75in;
+  box-sizing: border-box;
+  width: 1.65in;
+  background: #EEE;
+  border: 1px solid #999;
+  border-radius: 10px;
+}
+
+div.controls {
+  @include right-bar-common;
+  top:1.5in;
+  left: $page_width + 2.75in;
+  padding:0.1in;
+
+  h2 {
+    text-align: center;
+    margin:0 0 1em;
+    padding:0;
+  }
+}
+
+div.note {
+  @include right-bar-common;
+  top:3.5in;
+  padding:0 0.15in;
+  font-size:9pt;
+
+  p {
+    margin: 1em 0;
+    padding: 0;
+    text-align: justify;
+  }
+}
+
+@media print {
+  div.controls,
+  div.note {
+    display:none;
+  }
+}

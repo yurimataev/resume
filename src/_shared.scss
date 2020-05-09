@@ -1,0 +1,223 @@
+$side-margin-width: 0.6in !default;
+$topbottom-margin-width: 0.4in !default;
+$page-width: 8.5in;
+$page-height: 11in;
+$body-width: $page-width - $side-margin-width * 2;
+$body-height: $page-height - $topbottom-margin-width * 2;
+
+@use '_right-bar' with (
+  $page-width: $page-width
+);
+@import 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+
+$heading-font: "Merriweather";
+$body-font: "Open Sans";
+
+// $heading-color: #2079c7;
+$heading-color: #f75d5d;
+
+$left-col-width: 4.9in !default;
+$left-col-right-margin: 0.35in !default;
+$left-total-width: $left-col-width + $left-col-right-margin;
+
+$header1-width: 3.5in;
+
+$col1-width: 1.90in;
+$col2-width: 2.05in;
+
+$h2-padding: 8pt !default;
+$row-spacing: 4pt;
+
+body {
+  position:relative;
+  background-color:#222;
+  font-family: $body-font;
+}
+
+div#page {
+  // border: 1px dashed #000;
+  position:relative;
+  background-color:#ffffff;
+  box-sizing: border-box;
+  max-width:$page-width;
+  height:$page-height;
+  margin:0.2in auto;
+  padding:$topbottom-margin-width $side-margin-width;
+  overflow:hidden;
+
+  transition: opacity 0.2s ease-in 0s;
+}
+
+@media print {
+  body {
+    position:relative;
+    background-color:#ffffff;
+    box-sizing: border-box;
+    max-width:$page-width;
+    height:$page-height - $topbottom-margin-width;
+    margin:-0.25in 0 0; // margin is negative to counteract automatic top margin inserted by browsers
+    padding:0;
+  }
+
+  div.page {
+    margin: 0;
+    padding: 0;
+    max-width: auto;
+    height: auto;
+  }
+}
+
+@mixin rightcol {
+  position:absolute;
+  top:0;
+  left:$left-total-width;
+  width:$body-width - $left-total-width;
+}
+
+@mixin reduced-text{
+  color:#666666;
+  font-weight: normal;
+  font-size:9pt;
+  font-family:$body-font;
+  line-height:1.15;
+}
+
+div.col-container {
+  position:relative;
+  width:100%;
+
+  > div.header1 {
+    width: $header1-width;
+  }
+  > div.header2 {
+    position:absolute;
+    top:0;
+    left: $header1-width;
+    width: $left-total-width - $header1-width;
+  }
+  > div.header3 {
+    @include rightcol;
+  }
+
+  @mixin latercol {
+    @include reduced-text;
+    position:absolute;
+    top: 2pt;
+  }
+
+  > div.col1 {
+    width:$col1-width;
+    padding-top: $row-spacing;
+  }
+  > div.col2 {
+    @include latercol;
+    left:$col1-width;
+    width:$col2-width;
+    padding-top: $row-spacing;
+  }
+  > div.col3 {
+    @include latercol;
+    $other-column-width: $col1-width + $col2-width;
+    left: $other-column-width;
+    width: $body-width - $other-column-width;
+    padding-top: $row-spacing;
+  }
+
+  > div.left ul {
+    list-style-type: "\01f784";
+    padding:0;
+    padding-left:0.5em;
+    margin:0;
+
+    > li {
+      padding-left:0.5em;
+    }
+  }
+
+  div.right ul {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+  }
+}
+
+#vertical-cutoff {
+    position:absolute;
+    left: -2in;
+    top:0;
+    width:10.5in;
+    height:0.15in;
+    border:1px dashed red;
+}
+
+.normal-text{
+    color:#000000;
+    font-weight:400;
+    text-decoration:none;
+    vertical-align:baseline;
+    font-size:10pt;
+    font-family:$body-font;
+    font-style:normal;
+    line-height:1.4;
+}
+.bold{
+    font-weight:bold
+}
+.italic{
+    font-style:italic
+}
+.nobr{
+  white-space:nowrap;
+}
+
+p {
+    padding: $h2-padding 0 0;
+    margin:0;
+}
+p.outdent {
+    font-size:10pt;
+    padding:12pt 0 0;
+    text-indent:-0.25in;
+    margin-left:0.25in;
+}
+
+.title{
+    padding-top:0pt;
+    color:$heading-color;
+    font-weight:bold;
+    font-size:28pt;
+    padding-bottom:0pt;
+    font-family:$heading-font;
+    line-height:1.15;
+    text-align:left;
+}
+h1 {
+    margin:0;
+    padding-top:20pt;
+    // padding-bottom:4pt;
+    color:$heading-color;
+    font-weight:bold;
+    font-size:12pt;
+    font-family:$heading-font;
+    line-height:1.15;
+    text-align:left
+}
+h2{
+    margin:0;
+    padding-top:$h2-padding;
+    padding-bottom:2pt;
+    font-weight:bold;
+    font-size:10pt;
+    font-family:$heading-font;
+    line-height:1.15;
+    page-break-after:avoid;
+    text-align:left
+}
+h3{
+  @include reduced-text;
+    margin:0;
+    padding-top:0;
+    padding-bottom:4pt;
+    page-break-after:avoid;
+    text-align:left
+}

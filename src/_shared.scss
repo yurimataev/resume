@@ -44,8 +44,6 @@ div#page {
   margin:0.2in auto;
   padding:$topbottom-margin-width $side-margin-width;
   overflow:hidden;
-
-  transition: opacity 0.2s ease-in 0s;
 }
 
 @media print {

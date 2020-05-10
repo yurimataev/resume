@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import Controls from './Controls';
-import Resume from './Resume';
-import Note from './Note';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Resume />
-    <Controls />
-    <Note />
+    <HashRouter hashType="noslash">
+      <App />
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -75,3 +75,20 @@
       padding-right:0.3in
   }
 }
+
+.TransitionPage-appear,
+.TransitionPage-enter {
+  opacity: 0;
+}
+.TransitionPage-appear-active,
+.TransitionPage-enter-active {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+}
+.TransitionPage-exit {
+  opacity: 1;
+}
+.TransitionPage-exit-active {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}

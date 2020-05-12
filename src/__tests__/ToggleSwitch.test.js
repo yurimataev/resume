@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from 'enzyme';
-import ToggleSwitch from "./ToggleSwitch";
+import ToggleSwitch from "../ToggleSwitch";
 
 const text = ["Yes", "No"];
 const chkID = "checkboxID";

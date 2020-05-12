@@ -11,7 +11,7 @@ function PureControls(props) {
   }
 
   return (
-    <div class="controls">
+    <div className="controls">
       <h2>Resume Layout</h2>
       <ToggleSwitch
         id="LayoutSwitcher"
@@ -30,10 +30,10 @@ function PureControls(props) {
   );
 }
 
-function PureBasicControls({ match }) {
+function BasicControls() {
 
   return (
-    <div class="controls">
+    <div className="controls">
       <h2>Resume Layout</h2>
       <div><Link to="/trad">Traditional</Link></div>
       <div><Link to="/twocol">Two-Column</Link></div>
@@ -42,6 +42,5 @@ function PureBasicControls({ match }) {
 }
 
 const Controls = withRouter(PureControls);
-const BasicControls = withRouter(PureBasicControls);
 
 export { Controls, BasicControls };

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import './App.scss';
+import './scss/App.scss';
 import { Controls } from './Controls';
 import Resume from './Resume';
 import Note from './Note';
@@ -18,7 +18,8 @@ class App extends Component {
           >
             <Switch location={this.props.location}>
               <Route exact path="/twocol" component={Resume} />
-              <Route path="" component={Resume} />
+              <Route exact path="/trad" component={Resume} />
+              <Redirect from="" to="/trad" />
             </Switch>
           </CSSTransition>
         </TransitionGroup>

@@ -1,0 +1,44 @@
+name: Yuri's Recume CI/CD
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set Up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install packages
+        run: npm install
+      - name: Run tests
+        run: npm test
+        env:
+          CI: true
+      - name: Build production version
+        run: npm run build
+      - name: Store results of build
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: build/*
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Load results of build
+        uses: actions/download-artifact@v1
+        with:
+          name: build
+      - name: Deploy to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          key: ${{ secrets.SSH_KEY }}
+          username: ${{ secrets.REMOTE_USER }}
+          source: "build/*"
+          target: ${{ secrets.REMOTE_TARGET }}

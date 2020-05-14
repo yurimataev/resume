@@ -3,10 +3,9 @@ import { withRouter, Link } from 'react-router-dom';
 import ToggleSwitch from './ToggleSwitch';
 
 function PureControls(props) {
-
   let toggleSwitchValue = true;
 
-  if (props.location.pathname === "/twocol"){
+  if (props.location.pathname === '/twocol') {
     toggleSwitchValue = false;
   }
 
@@ -15,14 +14,14 @@ function PureControls(props) {
       <h2>Resume Layout</h2>
       <ToggleSwitch
         id="LayoutSwitcher"
-        Title='Layout'
+        Title="Layout"
         Text={['Traditional', 'Two-Column']}
         defaultChecked={toggleSwitchValue}
         onChange={(e) => {
           if (e.target.checked === true) {
-            props.history.push("/trad");
+            props.history.push('/trad');
           } else {
-            props.history.push("/twocol");
+            props.history.push('/twocol');
           }
         }}
       />
@@ -31,7 +30,6 @@ function PureControls(props) {
 }
 
 function BasicControls() {
-
   return (
     <div className="controls">
       <h2>Resume Layout</h2>

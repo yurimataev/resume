@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
-import { createMemoryHistory } from "history";
-import { Router, Route } from 'react-router-dom';
-// import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import { mount } from "enzyme";
+import React from 'react';
+import { createMemoryHistory } from 'history';
+import { Router } from 'react-router-dom';
+import { mount } from 'enzyme';
 import App from '../App';
-import ToggleSwitch from "../ToggleSwitch";
 
 /*
     User Interaction Tests
 */
 
 describe('Main App', () => {
-  it ('should send user to /trad when he toggles the switch on /twocol', () => {
+  it('should send user to /trad when he toggles the switch on /twocol', () => {
     const historyObj = createMemoryHistory();
     historyObj.location.pathname = '/twocol';
     const pushSpy = jest.spyOn(historyObj, 'push');
@@ -19,7 +17,7 @@ describe('Main App', () => {
     const wrapper = mount(
       <Router history={historyObj}>
         <App />
-      </Router>
+      </Router>,
     );
 
     const toggleSwitch = wrapper.find('input#LayoutSwitcher');
@@ -29,14 +27,14 @@ describe('Main App', () => {
     expect(pushSpy).toHaveBeenCalledWith('/trad');
   });
 
-  it ('should send user to /twocol when he toggles the switch on /trad', () => {
+  it('should send user to /twocol when he toggles the switch on /trad', () => {
     const historyObj = createMemoryHistory();
     const pushSpy = jest.spyOn(historyObj, 'push');
 
     const wrapper = mount(
       <Router history={historyObj}>
         <App />
-      </Router>
+      </Router>,
     );
 
     expect(historyObj.location.pathname).toBe('/trad');

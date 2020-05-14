@@ -31,7 +31,7 @@ function Resume({ match }) {
   <div>
     <p className="outdent">
       <span className="bold">Objective:</span>
-      &nbsp;I am seeking to apply the technical and soft skills accumulated over 17 years as a full stack web developer, Linux server administrator and open source contributor, in pivoting to a Support Engineer career.
+      &nbsp;I am seeking to apply the technical and soft skills accumulated over 17 years as a full stack web developer, Linux server administrator and open source contributor, in pivoting to a Software Engineer career.
       {/* &nbsp;I am seeking to apply the technical and soft skills accumulated over a 17-year long career as a full stack web developer, Linux server administrator and open source contributor, to the Support Engineer role. */}
     </p>
   </div>

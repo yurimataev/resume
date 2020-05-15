@@ -1,4 +1,4 @@
-name: Yuri's Recume CI/CD
+name: Yuri's Resume CI/CD
 on:
   push:
     branches:
@@ -22,16 +22,17 @@ jobs:
       - name: Build production version
         run: npm run build
       - name: Store results of build
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: build
           path: build/*
 
   deploy:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Load results of build
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: build
       - name: Deploy to server
@@ -40,5 +41,6 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           key: ${{ secrets.SSH_KEY }}
           username: ${{ secrets.REMOTE_USER }}
-          source: "build/*"
+          source: build
           target: ${{ secrets.REMOTE_TARGET }}
+          overwrite: true

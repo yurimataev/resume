@@ -50,7 +50,9 @@ div#positioner {
 
 div#page {
   // border: 1px dashed #E00;
-  position:relative;
+  position:absolute;
+  top:0;
+  left:0;
   background-color:#ffffff;
   box-sizing: border-box;
   width:$page-width;

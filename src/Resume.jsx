@@ -232,13 +232,29 @@ function Resume({ match }) {
                 </li>
               </ul>
               <h2 className="hide-trad-disabled">
-                <span className="bold">Human Languages</span>
+                <span className="bold">Natural Languages</span>
               </h2>
               <ul className="hide-trad-disabled">
-                <li>English (fluent)</li>
-                <li>Russian (fluent)</li>
-                <li>French (intermediate)</li>
-                <li>German (intermediate)</li>
+                <li>
+                  English (
+                  <span className="italic">native/bilingual</span>
+                  )
+                </li>
+                <li>
+                  Russian (
+                  <span className="italic">native/bilingual</span>
+                  )
+                </li>
+                <li>
+                  French (
+                  <span className="italic">advanced</span>
+                  )
+                </li>
+                <li>
+                  German (
+                  <span className="italic">intermediate</span>
+                  )
+                </li>
               </ul>
             </div>
 

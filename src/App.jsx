@@ -10,7 +10,7 @@ import Note from './Note';
 
 function App (props) {
   return (
-      <div>
+      <div id="positioner">
         <TransitionGroup className="transition-group">
           <CSSTransition
             timeout={{ enter: 400, exit: 400 }}
@@ -24,8 +24,10 @@ function App (props) {
             </Switch>
           </CSSTransition>
         </TransitionGroup>
-        <Controls />
-        <Note />
+        <div id="right-positioner">
+          <Controls />
+          <Note />
+        </div>
       </div>
   );
 }

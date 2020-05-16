@@ -1,17 +1,25 @@
 $side-margin-width: 0.6in !default;
 $topbottom-margin-width: 0.4in !default;
+
 $page-width: 8.5in;
 $page-height: 11in;
+$page-margin: 0.2in;
+
 $body-width: $page-width - $side-margin-width * 2;
 $body-height: $page-height - $topbottom-margin-width * 2;
 
-@use '_right-bar' with (
-  $page-width: $page-width
-);
-@import 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+$right-bar-spacing: 0.5in;
+$right-bar-width: 1.65in;
 
-$heading-font: "Merriweather";
-$body-font: "Open Sans";
+@use '_right-bar' with (
+  $page-width: $page-width,
+  $left-spacing: $right-bar-spacing,
+  $bar-width: $right-bar-width
+);
+@import 'https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+
+$heading-font: "Merriweather", serif;
+$body-font: "Open Sans", sans-serif;
 
 // $heading-color: #2079c7;
 $heading-color: #f75d5d;
@@ -29,19 +37,25 @@ $h2-padding: 8pt !default;
 $row-spacing: 4pt;
 
 body {
-  position:relative;
   background-color:#222;
   font-family: $body-font;
 }
 
+div#positioner {
+  position:relative;
+  margin: 0 auto;
+  width: $page-width + 2 * $page-margin;
+  padding-right: $right-bar-spacing + $right-bar-width - $page-margin;
+}
+
 div#page {
-  // border: 1px dashed #000;
+  // border: 1px dashed #E00;
   position:relative;
   background-color:#ffffff;
   box-sizing: border-box;
-  max-width:$page-width;
+  width:$page-width;
   height:$page-height;
-  margin:0.2in auto;
+  margin:$page-margin;
   padding:$topbottom-margin-width $side-margin-width;
   overflow:hidden;
 }
@@ -51,16 +65,22 @@ div#page {
     position:relative;
     background-color:#ffffff;
     box-sizing: border-box;
-    max-width:$page-width;
+    width:$page-width;
     height:$page-height - $topbottom-margin-width;
-    margin:-0.25in 0 0; // margin is negative to counteract automatic top margin inserted by browsers
+    margin:0;
     padding:0;
   }
 
-  div.page {
+  div#positioner {
     margin: 0;
     padding: 0;
-    max-width: auto;
+    width: auto;
+    height: auto;
+  }
+
+  div#page {
+    margin: 0;
+    width: auto;
     height: auto;
   }
 }

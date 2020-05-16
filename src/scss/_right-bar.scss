@@ -1,10 +1,16 @@
 $page-width: 8.5in !default;
+$left-spacing: 2.75in !default;
+$bar-width: 1.65in !default;
+
+div#right-positioner {
+  position:absolute;
+  left: $page-width + $left-spacing;
+}
 
 @mixin right-bar-common{
   position:fixed;
-  left: $page_width + 2.75in;
   box-sizing: border-box;
-  width: 1.65in;
+  width: $bar-width;
   background: #EEE;
   border: 1px solid #999;
   border-radius: 10px;
@@ -13,7 +19,6 @@ $page-width: 8.5in !default;
 div.controls {
   @include right-bar-common;
   top:1.5in;
-  left: $page_width + 2.75in;
   padding:0.1in;
 
   h2 {
@@ -37,8 +42,7 @@ div.note {
 }
 
 @media print {
-  div.controls,
-  div.note {
+  div#right-positioner {
     display:none;
   }
 }

@@ -31,8 +31,8 @@ function Resume({ match }) {
         <div>
           <p className="outdent">
             <span className="bold">Objective:</span>
-        &nbsp;I am seeking to apply the technical and soft skills accumulated over 17 years as a full stack web developer, Linux server administrator and open source contributor, in pivoting to a Software Engineer career.
-            {/* &nbsp;I am seeking to apply the technical and soft skills accumulated over a 17-year long career as a full stack web developer, Linux server administrator and open source contributor, to the Support Engineer role. */}
+        &nbsp;To apply the technical and soft skills accumulated over 17 years as a full stack web developer, Linux server administrator and open source contributor, in pivoting to a Software Engineer career.
+            {/* &nbsp;To apply the technical and soft skills accumulated over a 17-year long career as a full stack web developer, Linux server administrator and open source contributor, to the Support Engineer role. */}
           </p>
         </div>
 
@@ -51,10 +51,10 @@ function Resume({ match }) {
             </div>
             <ul>
               <li>
-                Refactored legacy CGI / Perl code to a modern PHP / Javascript stack, substantially increasing website performance.
+                Increased website performance by 60% by leading an initiative to refactor a legacy codebase into a modern development stack.
               </li>
               <li>
-                Worked closely with the content team to streamline their workflow, automating many routine tasks to save time and increase efficiency.
+                Collaborated closely with the content team to streamline their workflow, automating many routine tasks to save time and increase efficiency, ultimately resulting in a 12% year-over-year increase in revenue.
               </li>
             </ul>
             <div className="job_heading">
@@ -70,13 +70,13 @@ function Resume({ match }) {
             </div>
             <ul>
               <li>
-                Refactored legacy code base (PHP / HTML-CSS / Vanilla JS stack) to modern coding and application design standards. Re-designed UX with a mobile-first approach. My work was a key part of the company's rise to leadership in its niche.
+                Accelerated company's rise to dominance (5-6x greater traffic than nearest competitor) by refactoring software to modern coding and application design standards, with a particular focus on mobile compatibility.
               </li>
               <li>
-                Implemented CI / CD environment to streamline development and deployment.
+                Organized the transition to a CI / CD development approach, reducing the time between feature roll-outs 75%.
               </li>
               <li>
-                Created a notification system for team members to receive alerts regarding high priority issues directly to their phones, using Java, Python and RESTful API.
+                Reduced response time by 50% and increased customer satisfaction by engineering and deploying a mobile alerting system for incidents.
               </li>
             </ul>
             <div className="job_heading">
@@ -92,13 +92,13 @@ function Resume({ match }) {
             </div>
             <ul>
               <li>
-                Refactored old code and shipped new features. Ensured reliable up-time for all services.
+                Pro-actively revised old code, developed new features and facilitated 99.5%+ up-time for all services.
               </li>
               <li>
-                Communicated technical information to non-technical co-workers in an accessible way.
+                Trained non-technical co-workers in SEO and web marketing best practices.
               </li>
               <li>
-                Improved website UX, code efficiency and SEO, increasing both traffic and revenue.
+                Oversaw a 30% increase in revenue, by improving web traffic, customer satisfaction and conversion rates.
               </li>
             </ul>
             <div className="job_heading">
@@ -114,10 +114,10 @@ function Resume({ match }) {
             </div>
             <ul>
               <li>
-                Worked remotely as part of a distributed team, in a dynamic startup environment.
+                Delivered the codebase that enabled the start-up's growth from launch to an active user base of 15,000 players, as part of a distributed engineering team.
               </li>
               <li>
-                Collaborated closely with customer support, marketing and content teams in an Agile-like development approach, to deliver features quickly.
+                Collaborated closely with customer support, marketing and content teams in an Agile-like development approach, to plan, implement, test and deploy new features on a weekly to bi-weekly basis.
               </li>
             </ul>
             <div className="job_heading">
@@ -125,7 +125,7 @@ function Resume({ match }) {
                 <span className="bold">Freelance Work</span>
                 {' '}
                 &mdash;
-                <span className="italic">Full Stack Developer &amp; &ldquo;Tech Handyman&rdquo;</span>
+                <span className="italic">Full Stack Developer &amp; Technology Consultant</span>
               </h2>
               <h3>
                 2002 - 2019
@@ -133,13 +133,13 @@ function Resume({ match }) {
             </div>
             <ul>
               <li>
-                Helped small businesses and individuals achieve or improve their web presence.
+                Guided small businesses and individuals seeking to create or improve their web presence.
               </li>
               <li>
                 Juggled competing priorities (budget vs time, marketing vs technical, etc) to deliver best value.
               </li>
               <li>
-                Regularly learned and applied new technical skills on tight deadlines.
+                Mastered and applied new technical skills regularly, and on tight deadlines.
               </li>
             </ul>
 
@@ -256,6 +256,16 @@ function Resume({ match }) {
                   )
                 </li>
               </ul>
+              {/*<h2 className="hide-trad-disabled">
+                <span className="bold">Concepts</span>
+              </h2>
+              <ul className="hide-trad-disabled">
+                <li>Agile methodologies</li>
+                <li>CI / CD</li>
+                <li>Microservice architecture</li>
+                <li>RESTful API</li>
+                <li>Mobile-first design</li>
+              </ul>*/}
             </div>
 
             <h1>Education</h1>
@@ -268,7 +278,7 @@ function Resume({ match }) {
 
             <h1>Personal Interests</h1>
             <p>
-              Brazilian Jiu Jitsu. Physical and mental aspects of athletic performance. How to coach.
+              Brazilian Jiu Jitsu. Physical and mental aspects of athletic performance. Coaching.
               <br />
               Sci fi and fantasy literature. Biology. History and archaeology. Gaming.
             </p>

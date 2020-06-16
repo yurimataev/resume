@@ -16,6 +16,12 @@ $toggle-height: $line-height * 2;
   -moz-user-select: none;
   -ms-user-select: none;
   text-align: left;
+  margin-bottom:10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &-checkbox {
     display: none;
   }

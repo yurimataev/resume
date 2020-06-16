@@ -10,7 +10,7 @@ Usage: <ToggleSwitch id="id" onChange={function (e) { console.log("Checkbox Curr
 
 class ToggleSwitch extends Component {
   state = {
-    checked: this.props.defaultChecked
+    checked: this.props.currentValue
   };
   onChange = e => {
     this.setState({
@@ -29,7 +29,6 @@ class ToggleSwitch extends Component {
           className="toggle-switch-checkbox"
           id={this.props.id}
           checked={this.props.currentValue}
-          defaultChecked={this.props.defaultChecked}
           onChange={this.onChange}
           disabled={this.props.disabled}
         />
@@ -68,7 +67,6 @@ ToggleSwitch.propTypes = {
   Name: PropTypes.string,
   Title: PropTypes.string,
   onChange: PropTypes.func,
-  defaultChecked: PropTypes.bool,
   currentValue: PropTypes.bool,
   disabled: PropTypes.bool
 };

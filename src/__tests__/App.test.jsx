@@ -21,7 +21,7 @@ describe('Main App', () => {
     );
 
     const toggleSwitch = wrapper.find('input#LayoutSwitcher');
-    expect(toggleSwitch.get(0).props.defaultChecked).toBe(false);
+    expect(toggleSwitch.get(0).props.checked).toBe(false);
     toggleSwitch.at(0).simulate('change', { target: { checked: true } });
 
     expect(pushSpy).toHaveBeenCalledWith('/trad');
@@ -40,7 +40,7 @@ describe('Main App', () => {
     expect(historyObj.location.pathname).toBe('/trad');
 
     const toggleSwitch = wrapper.find('input#LayoutSwitcher');
-    expect(toggleSwitch.get(0).props.defaultChecked).toBe(true);
+    expect(toggleSwitch.get(0).props.checked).toBe(true);
     toggleSwitch.at(0).simulate('change', { target: { checked: false } });
 
     expect(pushSpy).toHaveBeenCalledWith('/twocol');

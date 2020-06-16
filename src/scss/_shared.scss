@@ -62,6 +62,17 @@ div#page {
   overflow:hidden;
 }
 
+div.intro-transition-group {
+  position:relative;
+  height: 4.1em;
+
+  > div {
+    position:absolute;
+    top:0;
+    left:0;
+  }
+}
+
 @media print {
   body {
     position:relative;

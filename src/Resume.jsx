@@ -1,11 +1,8 @@
 import React from 'react';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-function Resume({ match }) {
-  if (match.path !== '/twocol') {
-    match.path = '/trad';
-  }
-
-  let pageClass = match.path;
+function Resume(props) {
+  let pageClass = props.path;
   pageClass = pageClass.replace('/', '');
 
   return (
@@ -28,13 +25,15 @@ function Resume({ match }) {
           </div>
         </div>
 
-        <div>
-          <p className="outdent">
-            <span className="bold">Objective:</span>
-        &nbsp;To apply the technical and soft skills accumulated over 17 years as a full stack web developer, Linux server administrator and open source contributor, in pivoting to a Software Engineer career.
-            {/* &nbsp;To apply the technical and soft skills accumulated over a 17-year long career as a full stack web developer, Linux server administrator and open source contributor, to the Support Engineer role. */}
-          </p>
-        </div>
+        <TransitionGroup className="intro-transition-group">
+          <CSSTransition
+            timeout={{ enter: 400, exit: 400 }}
+            classNames="TransitionPage"
+            key={props.introMode}
+          >
+            <Intro mode={props.introMode} role={props.role} />
+          </CSSTransition>
+        </TransitionGroup>
 
         <div className="col-container">
           <div className="left">
@@ -54,7 +53,7 @@ function Resume({ match }) {
                 Increased website performance by 60% by leading an initiative to refactor a legacy codebase into a modern development stack.
               </li>
               <li>
-                Collaborated closely with the content team to streamline their workflow, automating many routine tasks to save time and increase efficiency, ultimately resulting in a 12% year-over-year increase in revenue.
+                Collaborated closely with the content team to streamline their workflow and increase efficiency, ultimately resulting in an 80% reduction in time devoted to routine tasks.
               </li>
             </ul>
             <div className="job_heading">
@@ -98,7 +97,7 @@ function Resume({ match }) {
                 Trained non-technical co-workers in SEO and web marketing best practices.
               </li>
               <li>
-                Oversaw a 30% increase in revenue, by improving web traffic, customer satisfaction and conversion rates.
+                Delivered a 30% increase in revenue, thanks to increased web traffic, conversion rates and customer satisfaction.
               </li>
             </ul>
             <div className="job_heading">
@@ -232,9 +231,19 @@ function Resume({ match }) {
                 </li>
               </ul>
               <h2 className="hide-trad-disabled">
-                <span className="bold">Natural Languages</span>
+                <span className="bold">Concepts & Principles</span>
               </h2>
               <ul className="hide-trad-disabled">
+                <li>DevOps</li>
+                <li>CI / CD</li>
+                <li>Microservice Architecture</li>
+                <li>RESTful API</li>
+                <li>Agile Methodologies</li>
+              </ul>
+              <h2 className="hide-trad">
+                <span className="bold">Natural Languages</span>
+              </h2>
+              <ul className="hide-trad">
                 <li>
                   English (
                   <span className="italic">native/bilingual</span>
@@ -256,16 +265,6 @@ function Resume({ match }) {
                   )
                 </li>
               </ul>
-              {/*<h2 className="hide-trad-disabled">
-                <span className="bold">Concepts</span>
-              </h2>
-              <ul className="hide-trad-disabled">
-                <li>Agile methodologies</li>
-                <li>CI / CD</li>
-                <li>Microservice architecture</li>
-                <li>RESTful API</li>
-                <li>Mobile-first design</li>
-              </ul>*/}
             </div>
 
             <h1>Education</h1>
@@ -276,8 +275,8 @@ function Resume({ match }) {
               <span className="italic nobr">Bachelor of Arts (Biology)</span>
             </h2>
 
-            <h1>Personal Interests</h1>
-            <p>
+            <h1 className="hide-twocol">Personal Interests</h1>
+            <p className="hide-twocol">
               Brazilian Jiu Jitsu. Physical and mental aspects of athletic performance. Coaching.
               <br />
               Sci fi and fantasy literature. Biology. History and archaeology. Gaming.
@@ -289,6 +288,28 @@ function Resume({ match }) {
 
       </div>
   );
+}
+
+function Intro (props){
+  if (props.mode === 'objective'){
+    return (
+      <div>
+        <p className="outdent">
+          <span className="bold">Objective:</span>
+      &nbsp;To apply the technical and soft skills accumulated over 17 years as a full stack web developer, Linux server administrator and open source contributor, in pivoting to a {props.role} career.
+        </p>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <p className="outdent">
+          <span className="bold">Summary:</span>
+          &nbsp;Full stack web developer, Linux server administrator and open source contributor, with a wide range of technical and soft skills accumulated over a 17-year-long career.
+        </p>
+      </div>
+    );
+  }
 }
 
 export default Resume;

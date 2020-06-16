@@ -1,6 +1,7 @@
 @use '_shared' as s with (
   $side-margin-width:0.4in,
-  $left-col-width:5.5in
+  $left-col-width:5.15in,
+  $left-col-right-margin:0.75in
 );
 
 .trad {
@@ -30,7 +31,7 @@
       padding: 0;
 
       &::after {
-        content: ', '
+        content: ', ';
       }
       &:last-child::after {
         content: ''
@@ -54,7 +55,7 @@
 }
 
 .twocol {
-  .hide-2col {
+  .hide-twocol {
     display: none;
   }
 

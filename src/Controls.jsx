@@ -3,10 +3,14 @@ import { withRouter, Link } from 'react-router-dom';
 import ToggleSwitch from './ToggleSwitch';
 
 function PureControls(props) {
-  let toggleSwitchValue = true;
+  let layoutSwitchValue = true;
+  let introSwitchValue = true;
 
   if (props.location.pathname === '/twocol') {
-    toggleSwitchValue = false;
+    layoutSwitchValue = false;
+  }
+  if (props.introMode === 'objective') {
+    introSwitchValue = false;
   }
 
   return (
@@ -16,13 +20,34 @@ function PureControls(props) {
         id="LayoutSwitcher"
         Title="Layout"
         Text={['Traditional', 'Two-Column']}
-        defaultChecked={toggleSwitchValue}
+        currentValue={layoutSwitchValue}
         onChange={(e) => {
           if (e.target.checked === true) {
             props.history.push('/trad');
           } else {
             props.history.push('/twocol');
           }
+        }}
+      />
+      <ToggleSwitch
+        id="IntroSwitcher"
+        Title="Introduction"
+        Text={['Summary', 'Objective']}
+        currentValue={introSwitchValue}
+        onChange={(e) => {
+          if (e.target.checked === true) {
+            props.introSwitcher('summary');
+          } else {
+            props.introSwitcher('objective');
+          }
+        }}
+      />
+      <h3>Desired Role</h3>
+      <input
+        type="text"
+        value={props.role}
+        onChange={(e) => {
+          props.roleSwitcher(e.target.value);
         }}
       />
     </div>

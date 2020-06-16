@@ -23,26 +23,28 @@ describe('Controls Function', () => {
     ).toBe(true);
   });
 
-  it('should have ToggleSwitch set to true when hash is not #twocol', () => {
+  it('should have LayoutSwitcher ToggleSwitch set to true when hash is not #twocol', () => {
+    const randomhash = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+
     const wrapper = mount(
-      <MemoryRouter initialEntries={['/randomhash']}>
+      <MemoryRouter initialEntries={['/' + randomhash]}>
         <Controls />
       </MemoryRouter>,
     );
 
-    const toggleSwitch = wrapper.find(ToggleSwitch);
-    expect(toggleSwitch.props().defaultChecked).toBe(true);
+    const toggleSwitch = wrapper.find('input#LayoutSwitcher');
+    expect(toggleSwitch.get(0).props.checked).toBe(true);
   });
 
-  it('should have ToggleSwitch set to true when hash is #twocol', () => {
+  it('should have LayoutSwitcher ToggleSwitch set to true when hash is #twocol', () => {
     const wrapper = mount(
       <MemoryRouter initialEntries={['/twocol']}>
         <Controls />
       </MemoryRouter>,
     );
 
-    const toggleSwitch = wrapper.find(ToggleSwitch);
-    expect(toggleSwitch.props().defaultChecked).toBe(false);
+    const toggleSwitch = wrapper.find('input#LayoutSwitcher');
+    expect(toggleSwitch.get(0).props.checked).toBe(false);
   });
 });
 

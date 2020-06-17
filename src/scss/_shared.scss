@@ -70,6 +70,7 @@ div.intro-transition-group {
     position:absolute;
     top:0;
     left:0;
+    width: $body-width;
   }
 }
 
@@ -95,6 +96,7 @@ div.intro-transition-group {
     margin: 0;
     width: auto;
     height: auto;
+    overflow: visible;
   }
 }
 

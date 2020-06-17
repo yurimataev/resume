@@ -127,7 +127,7 @@ function Resume(props) {
                 <span className="italic">Full Stack Developer &amp; Technology Consultant</span>
               </h2>
               <h3>
-                2002 - 2019
+                2003 - 2019
               </h3>
             </div>
             <ul>

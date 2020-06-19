@@ -28,7 +28,7 @@ describe('Resume Component', () => {
   });
 
   it('should display Objective if introMode is objective', () => {
-    const wrapper = mount(<Resume path='/trad' introMode='objective' />);
+    const wrapper = mount(<Resume path='/trad' introMode='objective' role='Software Engineer' />);
 
     expect(
       wrapper.find('Intro').text(),

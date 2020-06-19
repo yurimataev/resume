@@ -292,11 +292,19 @@ function Resume(props) {
 
 function Intro (props){
   if (props.mode === 'objective'){
+    const vowels = ["a","e","i","o","u"]
+    const first_char = props.role.charAt(0).toLowerCase();
+
+    let article = 'a';
+    if (vowels.includes(first_char)){
+      article = 'an';
+    }
+
     return (
       <div>
         <p className="outdent">
           <span className="bold">Objective:</span>
-      &nbsp;To apply the technical and soft skills accumulated over 17 years as a full stack web developer, Linux server administrator and open source contributor, in pivoting to a {props.role} career.
+      &nbsp;To apply the technical and soft skills accumulated over 17 years as a full stack web developer, Linux server administrator and open source contributor, in pivoting to {article} {props.role} career.
         </p>
       </div>
     );

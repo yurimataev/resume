@@ -239,6 +239,12 @@ function Resume(props) {
                 <li>Microservice Architecture</li>
                 <li>RESTful API</li>
                 <li>Agile Methodologies</li>
+                <li>
+                  Code Testing (
+                  <span className="italic">Unit Testing, End-to-End Testing</span>
+                  )
+                </li>
+                <li>Testing Automation</li>
               </ul>
               <h2 className="hide-trad">
                 <span className="bold">Natural Languages</span>

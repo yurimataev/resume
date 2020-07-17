@@ -44,7 +44,7 @@ function Resume(props) {
                 {' '}
                 &mdash;
                 {' '}
-                <span className="italic">Full Stack Developer, Remote</span>
+                <span className="italic">Senior Full Stack Developer, Remote</span>
               </h2>
               <h3>September 2018 - Present</h3>
             </div>
@@ -61,7 +61,7 @@ function Resume(props) {
                 <span className="bold">Russian Doska Network</span>
                 {' '}
                 &mdash;
-                <span className="italic">Full Stack Developer, Remote</span>
+                <span className="italic">Senior Full Stack Developer, Remote</span>
               </h2>
               <h3>
                 November 2011 - August 2018
@@ -190,16 +190,15 @@ function Resume(props) {
                 </li>
                 <li>
                   JavaScript (
-                  <span className="italic">React, Angular, Vue, NodeJS</span>
+                  <span className="italic">React, Vue, NodeJS</span>
                   )
                 </li>
                 <li>Python</li>
                 <li>
                   Ruby (
-                  <span className="italic">Rails, Jekyll</span>
+                  <span className="italic">Rails</span>
                   )
                 </li>
-                <li>Java</li>
                 <li>HTML5 / CSS3</li>
                 <li>SASS, SCSS</li>
                 <li>
@@ -310,7 +309,7 @@ function Intro (props){
       <div>
         <p className="outdent">
           <span className="bold">Objective:</span>
-      &nbsp;To apply the technical and soft skills accumulated over 17 years as a full stack web developer, Linux server administrator and open source contributor, in pivoting to {article} {props.role} career.
+      &nbsp;To apply the technical and soft skills accumulated over 17 years as a full stack software engineer, Linux server administrator and open source contributor, in pivoting to {article} {props.role} career.
         </p>
       </div>
     );
@@ -319,7 +318,7 @@ function Intro (props){
       <div>
         <p className="outdent">
           <span className="bold">Summary:</span>
-          &nbsp;Full stack web developer, Linux server administrator and open source contributor, with a wide range of technical and soft skills accumulated over a 17-year-long career.
+          &nbsp;Full stack software engineer, Linux server administrator and open source contributor, with a wide range of technical and soft skills accumulated over a 17-year-long career.
         </p>
       </div>
     );

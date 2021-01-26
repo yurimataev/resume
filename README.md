@@ -5,3 +5,7 @@ It all started when I was updating my resume, and became frustrated with the lim
 The resume is written with React and SCSS, and comes with a complete test suite written with Jest, Enzyme and ESLint. Its home on the web is [https://resume.mataev.com]. Deployment to this location is achieved with the help of a CI/CD pipeline built using GitHub Actions.
 
 I still have no rational explanation for doing this, other than: it was fun!
+
+Run locally with:
+
+```npm start```

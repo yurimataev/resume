@@ -280,12 +280,12 @@ function Resume(props) {
               <span className="italic nobr">Bachelor of Arts (Biology)</span>
             </h2>
 
-            <h1 className="hide-twocol">Personal Interests</h1>
+            {/* <h1 className="hide-twocol">Personal Interests</h1>
             <p className="hide-twocol">
               Brazilian Jiu Jitsu. Physical and mental aspects of athletic performance. Coaching.
               <br />
               Sci fi and fantasy literature. Biology. History and archaeology. Gaming.
-            </p>
+            </p> */}
 
           </div>
 

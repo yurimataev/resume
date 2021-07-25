@@ -40,13 +40,31 @@ function Resume(props) {
             <h1>Professional Experience</h1>
             <div className="job_heading">
               <h2>
+                <span className="bold">Wickfire</span>
+                {' '}
+                &mdash;
+                {' '}
+                <span className="italic">Senior Software Engineer, Remote</span>
+              </h2>
+              <h3>Aug 2020 - Present</h3>
+            </div>
+            <ul>
+              <li>
+                Developed a frontend speed optimization strategy for public web properties.
+              </li>
+              <li>
+                Implemented a testing framework based on Node and WebdriverIO as part of expansion of automated testing.
+              </li>
+            </ul>
+            <div className="job_heading">
+              <h2>
                 <span className="bold">Knitting Patterns Galore</span>
                 {' '}
                 &mdash;
                 {' '}
                 <span className="italic">Senior Full Stack Developer, Remote</span>
               </h2>
-              <h3>September 2018 - Present</h3>
+              <h3>Sep 2018 - Aug 2020</h3>
             </div>
             <ul>
               <li>
@@ -61,19 +79,33 @@ function Resume(props) {
                 <span className="bold">Russian Doska Network</span>
                 {' '}
                 &mdash;
-                <span className="italic">Senior Full Stack Developer, Remote</span>
+                {' '}
+                <span className="italic">Lead Full Stack Developer, Remote</span>
               </h2>
               <h3>
-                November 2011 - August 2018
+                Dec 2013 - Aug 2018
               </h3>
             </div>
             <ul>
               <li>
-                Accelerated company's rise to dominance (5-6x greater traffic than nearest competitor) by refactoring software to modern coding and application design standards, with a particular focus on mobile compatibility.
+                Accelerated company's rise to dominance (5-6x greater traffic than nearest competitor) by overseeing refactor of software to modern coding and application design standards, with a particular focus on mobile compatibility.
               </li>
               <li>
                 Organized the transition to a CI / CD development approach, reducing the time between feature roll-outs 75%.
               </li>
+            </ul>
+            <div className="job_heading">
+              <h2>
+                {' '}
+                &mdash;
+                {' '}
+                <span className="italic">Senior Full Stack Developer, Remote</span>
+              </h2>
+              <h3>
+                Nov 2011 - Dec 2013
+              </h3>
+            </div>
+            <ul>
               <li>
                 Reduced response time by 50% and increased customer satisfaction by engineering and deploying a mobile alerting system for incidents.
               </li>
@@ -83,10 +115,11 @@ function Resume(props) {
                 <span className="bold">Advanced Embroidery Designs</span>
                 {' '}
                 &mdash;
-                <span className="italic">PHP Developer &amp; Server Admin</span>
+                {' '}
+                <span className="italic">PHP Developer &amp; Systems Admin</span>
               </h2>
               <h3>
-                May 2005 - November 2011
+                May 2005 - Nov 2011
               </h3>
             </div>
             <ul>
@@ -105,10 +138,11 @@ function Resume(props) {
                 <span className="bold">Ariana RPG (voin.net)</span>
                 {' '}
                 &mdash;
+                {' '}
                 <span className="italic">PHP Developer, Remote</span>
               </h2>
               <h3>
-                April 2003 - May 2005
+                Apr 2003 - May 2005
               </h3>
             </div>
             <ul>
@@ -116,7 +150,7 @@ function Resume(props) {
                 Delivered the codebase that enabled the start-up's growth from launch to an active user base of 15,000 players, as part of a distributed engineering team.
               </li>
               <li>
-                Collaborated closely with customer support, marketing and content teams in an Agile-like development approach, to plan, implement, test and deploy new features on a weekly to bi-weekly basis.
+                Collaborated closely with customer support, marketing and content teams to plan, implement, test and deploy new features on a weekly to bi-weekly basis.
               </li>
             </ul>
             <div className="job_heading">
@@ -124,6 +158,7 @@ function Resume(props) {
                 <span className="bold">Freelance Work</span>
                 {' '}
                 &mdash;
+                {' '}
                 <span className="italic">Full Stack Developer &amp; Technology Consultant</span>
               </h2>
               <h3>
@@ -133,9 +168,6 @@ function Resume(props) {
             <ul>
               <li>
                 Guided small businesses and individuals seeking to create or improve their web presence.
-              </li>
-              <li>
-                Juggled competing priorities (budget vs time, marketing vs technical, etc) to deliver best value.
               </li>
               <li>
                 Mastered and applied new technical skills regularly, and on tight deadlines.
@@ -184,21 +216,16 @@ function Resume(props) {
               </h2>
               <ul>
                 <li>
-                  PHP (
-                  <span className="italic">Laravel, Wordpress</span>
-                  )
-                </li>
-                <li>
                   JavaScript (
                   <span className="italic">React, Vue, NodeJS</span>
                   )
                 </li>
-                <li>Python</li>
                 <li>
-                  Ruby (
-                  <span className="italic">Rails</span>
+                  PHP (
+                  <span className="italic">Symfony, Laravel, Wordpress</span>
                   )
                 </li>
+                <li>Python</li>
                 <li>HTML5 / CSS3</li>
                 <li>SASS, SCSS</li>
                 <li>
@@ -217,10 +244,10 @@ function Resume(props) {
               <ul>
                 <li>Git</li>
                 <li>GitHub Actions</li>
-                <li>GitLab CI</li>
+                <li>AWS</li>
                 <li>Docker</li>
                 <li>Vagrant</li>
-                <li>Selenium</li>
+                <li>Selenium, WebdriverIO</li>
                 <li>Apache</li>
                 <li>nginx</li>
                 <li>
@@ -309,7 +336,7 @@ function Intro (props){
       <div>
         <p className="outdent">
           <span className="bold">Objective:</span>
-      &nbsp;To apply the technical and soft skills accumulated over 17 years as a full stack software engineer, Linux server administrator and open source contributor, in pivoting to {article} {props.role} career.
+      &nbsp;To apply the technical and soft skills accumulated over 17 years as a team lead, full stack software engineer and Linux server administrator, in pivoting to {article} {props.role} career.
         </p>
       </div>
     );
@@ -318,7 +345,7 @@ function Intro (props){
       <div>
         <p className="outdent">
           <span className="bold">Summary:</span>
-          &nbsp;Full stack software engineer, Linux server administrator and open source contributor, with a wide range of technical and soft skills accumulated over a 17-year-long career.
+          &nbsp;Team lead, full stack software engineer and Linux server administrator, with a wide range of technical and soft skills accumulated over a 17-year-long career.
         </p>
       </div>
     );

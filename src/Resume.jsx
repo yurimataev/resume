@@ -50,10 +50,10 @@ function Resume(props) {
             </div>
             <ul>
               <li>
-                Developed a frontend speed optimization strategy for public web properties.
+                Worked at all levels of the software stack, with a particular emphasis on performance optimization, automated end-to-end testing and developer tooling.
               </li>
               <li>
-                Implemented a testing framework based on Node and WebdriverIO as part of expansion of automated testing.
+                Conceptualized and developed an end-to-end testing framework based on WebdriverIO and Node.
               </li>
             </ul>
             <div className="job_heading">
@@ -68,7 +68,7 @@ function Resume(props) {
             </div>
             <ul>
               <li>
-                Increased website performance by 60% by leading an initiative to refactor a legacy codebase into a modern development stack.
+                Increased performance by 60% by leading an initiative to refactor a legacy codebase into a modern stack.
               </li>
               <li>
                 Collaborated closely with the content team to streamline their workflow and increase efficiency, ultimately resulting in an 80% reduction in time devoted to routine tasks.
@@ -127,10 +127,7 @@ function Resume(props) {
                 Pro-actively revised old code, developed new features and facilitated 99.5%+ up-time for all services.
               </li>
               <li>
-                Trained non-technical co-workers in SEO and web marketing best practices.
-              </li>
-              <li>
-                Delivered a 30% increase in revenue, thanks to increased web traffic, conversion rates and customer satisfaction.
+                Facilitated a 30% increase in revenue, thanks to increased web traffic, conversion rates and customer satisfaction.
               </li>
             </ul>
             <div className="job_heading">
@@ -147,10 +144,7 @@ function Resume(props) {
             </div>
             <ul>
               <li>
-                Delivered the codebase that enabled the start-up's growth from launch to an active user base of 15,000 players, as part of a distributed engineering team.
-              </li>
-              <li>
-                Collaborated closely with customer support, marketing and content teams to plan, implement, test and deploy new features on a weekly to bi-weekly basis.
+                Collaborated with marketing and content teams to design, implement and deploy new features on a weekly basis.
               </li>
             </ul>
             <div className="job_heading">

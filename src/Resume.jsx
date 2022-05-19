@@ -323,7 +323,7 @@ function Intro (props){
       <div>
         <p className="outdent">
           <span className="bold">Summary:</span>
-          &nbsp;Team lead, full stack software engineer and Linux server administrator, with a wide range of technical and soft skills accumulated over a {careerLength}-year-long career.
+          &nbsp;Full stack software engineer and Linux server administrator, with a wide range of technical and soft skills accumulated over a {careerLength}-year-long career.
         </p>
       </div>
     );

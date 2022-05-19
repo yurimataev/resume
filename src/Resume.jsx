@@ -299,6 +299,8 @@ function Resume(props) {
 }
 
 function Intro (props){
+  const careerLength = new Date().getFullYear() - 2003; 
+  
   if (props.mode === 'objective'){
     const vowels = ["a","e","i","o","u"]
     const first_char = props.role.charAt(0).toLowerCase();
@@ -312,7 +314,7 @@ function Intro (props){
       <div>
         <p className="outdent">
           <span className="bold">Objective:</span>
-      &nbsp;To apply the technical and soft skills accumulated over 17 years as a team lead, full stack software engineer and Linux server administrator, in pivoting to {article} {props.role} career.
+      &nbsp;To apply the technical and soft skills accumulated over {careerLength} years as a team lead, full stack software engineer and Linux server administrator, in pivoting to {article} {props.role} career.
         </p>
       </div>
     );
@@ -321,7 +323,7 @@ function Intro (props){
       <div>
         <p className="outdent">
           <span className="bold">Summary:</span>
-          &nbsp;Team lead, full stack software engineer and Linux server administrator, with a wide range of technical and soft skills accumulated over a 17-year-long career.
+          &nbsp;Team lead, full stack software engineer and Linux server administrator, with a wide range of technical and soft skills accumulated over a {careerLength}-year-long career.
         </p>
       </div>
     );

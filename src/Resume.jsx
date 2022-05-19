@@ -53,7 +53,7 @@ function Resume(props) {
                 Worked at all levels of the software stack, with a particular emphasis on performance optimization, automated end-to-end testing and developer tooling.
               </li>
               <li>
-                Conceptualized and developed an end-to-end testing framework based on WebdriverIO and Node.
+                Advocated for an automated end-to-end testing strategy to improve code quality. Conceptualized and developed a framework for this purpose based on WebdriverIO, and AWS infrastructure.
               </li>
             </ul>
             <div className="job_heading">
@@ -83,7 +83,7 @@ function Resume(props) {
                 <span className="italic">Lead Full Stack Developer, Remote</span>
               </h2>
               <h3>
-                Dec 2013 - Aug 2018
+                Nov 2011 - Aug 2018
               </h3>
             </div>
             <ul>
@@ -93,21 +93,8 @@ function Resume(props) {
               <li>
                 Organized the transition to a CI / CD development approach, reducing the time between feature roll-outs 75%.
               </li>
-            </ul>
-            <div className="job_heading">
-              <h2>
-                {' '}
-                &mdash;
-                {' '}
-                <span className="italic">Senior Full Stack Developer, Remote</span>
-              </h2>
-              <h3>
-                Nov 2011 - Dec 2013
-              </h3>
-            </div>
-            <ul>
               <li>
-                Reduced response time by 50% and increased customer satisfaction by engineering and deploying a mobile alerting system for incidents.
+                Reduced support team response time by 50% and increased customer satisfaction by engineering and deploying a mobile alerting system for incidents.
               </li>
             </ul>
             <div className="job_heading">
@@ -124,7 +111,7 @@ function Resume(props) {
             </div>
             <ul>
               <li>
-                Pro-actively revised old code, developed new features and facilitated 99.5%+ up-time for all services.
+                Developed new features, pro-actively revised old code and facilitated 99.5%+ up-time for all services.
               </li>
               <li>
                 Facilitated a 30% increase in revenue, thanks to increased web traffic, conversion rates and customer satisfaction.
@@ -142,11 +129,6 @@ function Resume(props) {
                 Apr 2003 - May 2005
               </h3>
             </div>
-            <ul>
-              <li>
-                Collaborated with marketing and content teams to design, implement and deploy new features on a weekly basis.
-              </li>
-            </ul>
             <div className="job_heading">
               <h2>
                 <span className="bold">Freelance Work</span>
@@ -238,15 +220,15 @@ function Resume(props) {
               <ul>
                 <li>Git</li>
                 <li>GitHub Actions</li>
+                <li>Gitlab CI/CD</li>
                 <li>AWS</li>
                 <li>Docker</li>
-                <li>Vagrant</li>
                 <li>Selenium, WebdriverIO</li>
                 <li>Apache</li>
                 <li>nginx</li>
                 <li>
                   Linux (
-                  <span className="italic">RHEL, Ubuntu Server</span>
+                  <span className="italic">RHEL, Ubuntu</span>
                   )
                 </li>
               </ul>

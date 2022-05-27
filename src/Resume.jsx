@@ -203,7 +203,7 @@ function Resume(props) {
                 </li>
                 <li>Python</li>
                 <li>HTML5 / CSS3</li>
-                <li>SASS, SCSS</li>
+                <li>SASS / SCSS</li>
                 <li>
                   SQL (
                   <span className="italic">MySQL, PostgreSQL</span>
@@ -248,10 +248,10 @@ function Resume(props) {
                 </li>
                 <li>Testing Automation</li>
               </ul>
-              <h2 className="hide-trad">
+              <h2 className="hide-trad-disabled">
                 <span className="bold">Natural Languages</span>
               </h2>
-              <ul className="hide-trad">
+              <ul className="hide-trad-disabled">
                 <li>
                   English (
                   <span className="italic">native/bilingual</span>

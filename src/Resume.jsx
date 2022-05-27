@@ -20,7 +20,7 @@ function Resume(props) {
           </div>
 
           <div className="header3">
-            <div>Norwich, NY 13815</div>
+            <div>Oxford, NY 13815</div>
             <div>www.github.com/yurimataev</div>
           </div>
         </div>
